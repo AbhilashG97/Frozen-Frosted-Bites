@@ -35,3 +35,6 @@ print(x/y)
 
 print(x//y)
 
+# Exponentiation 
+
+print("This is an example of exponentiation : "+str(12 ** 12))
