@@ -35,7 +35,7 @@ This document will contain a short demo of the python language -
 
 ### Loops
 
-    Loops in python follow this syntax -
+Loops in python follow this syntax -
 
 ```python
 for token in tokens:
@@ -170,5 +170,5 @@ y = 3 + 4j
 
 There are **two** kinds of division operators:
 
-1. "true division" performed by "/"
-2. "floor division" performed by "//"
+1. "true division" performed by ```/```
+2. "floor division" performed by ```//```
