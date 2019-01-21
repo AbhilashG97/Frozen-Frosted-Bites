@@ -37,32 +37,32 @@ This document will contain a short demo of the python language -
 
     Loops in python follow this syntax -
 
-    ```python
-    for token in tokens:
-    ````
-    :warning:   To print items of a collection in single line, you have to do the following:
+```python
+for token in tokens:
+```
+:warning: To print items of a collection in single line, you have to do the following:
 
-    ```python
-    for(item in items)
-        print(item, end=" ")
-    ```
+```python
+for(item in items)
+    print(item, end=" ")
+```
 
 ### Strings
 
-    Strings are immutable in python. They can be enclosed in single, double, triple quotes.
+Strings are immutable in python. They can be enclosed in single, double, triple quotes.
 
-    Example - 
+Example - 
 
-    1. "text" OR ""text"" OR """text"""
-    1. 'text' OR ''text'' OR '''text'''
+1. ```"text"``` OR ```""text""``` OR ```"""text"""```
+1. ```'text'``` OR ```''text''``` OR ```'''text'''```
     
-    :warning:   Strings in triple quotes can be written in multiple lines.
+:warning: Strings in triple quotes can be written in multiple lines.
 
-    :warning:   Multiplication can also be performed on strings.
+:warning: Multiplication can also be performed on strings.
 
-    ```python 
-        print(".-." * 4)
-    ```
+```python 
+    print(".-." * 4)
+```
 ### Indentation 
 
 A block is a group of statements in a program or script. Usually it consists of at least one statement and of declarations for the block, depending on the programming or scripting language. A language, which allows grouping with blocks, is called a **block structured language**.
