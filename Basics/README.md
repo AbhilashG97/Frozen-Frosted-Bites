@@ -63,6 +63,63 @@ Example -
 ```python 
     print(".-." * 4)
 ```
+
+:warning: A string in Python consists of a series or sequence of characters. 
+
+We can also use indices to access characters of a String. We can refer to the characters of a string in the usual way as -  
+
+```python
+fruit = "watermelon"
+
+print(fruit[0])
+```
+
+:warning: Python also allows us to access characters from a string from the last index too. We can do that with the help of the following example. 
+
+```python
+
+fruit = "watermelon"
+
+print(fruit[-1])
+```
+
+:warning: Strings are immutable in Python.
+
+#### Some operations on String 
+
+Here are some operations that can be performed with Strings in Python - 
+
+1.  **Concatenation:**
+    
+    We can concatenate Strings in Python using the ```+``` operator. 
+
+    ```python
+    print("watermelon"+" is delicous")
+    ```
+
+1.  **Repetition:**
+    
+    We can also repeat a string **n** times. 
+
+    ```python
+    print("watermelon" * 10) 
+    ```
+
+1.  **Indexing:**
+
+    We can index a particular character of string. The format for the same is given above.
+
+1.  **Slicing:**
+
+    We can also slice strings. Slicing can be done by following the given syntax- 
+
+    ```python 
+    print("watermelon "[2:4])
+    ```
+
+    :warning: In the syntax ```[a:b]```, a is **inclusive** and b is **exclusive**.
+
+
 ### Indentation 
 
 A block is a group of statements in a program or script. Usually it consists of at least one statement and of declarations for the block, depending on the programming or scripting language. A language, which allows grouping with blocks, is called a **block structured language**.
