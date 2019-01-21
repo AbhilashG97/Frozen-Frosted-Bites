@@ -1,4 +1,4 @@
-# Python basics
+# Python Basics :snake:
 
 ## Introduction 
 
@@ -27,6 +27,8 @@ python -m compileall .
 :warning:   Whenever a Python program is called, Python will check, if there exists a compiled version with the .pyc suffix. This file has to be newer than the file with the .py suffix. If such a file exists, Python will load the byte code, which will speed up the start up time of the script. If there exists no byte code version, Python will create the byte code before it starts the execution of the program. 
 
 :exclamation: Execution of a Python program means execution of the byte code on the Python Virtual Machine (PVM).
+
+:warning: Python does not do implicit casting, as implicit casting can mask critical logic errors. Therefore, if we want to concatenate any object with a string in python we can to either explicitly use the ```str``` function or we have to use any string formatter in Python. 
 
 
 ## Programming in Python 
@@ -119,6 +121,38 @@ Here are some operations that can be performed with Strings in Python -
 
     :warning: In the syntax ```[a:b]```, a is **inclusive** and b is **exclusive**.
 
+1.  **Size**
+
+    We can find the size of a string in Python using the len() function. 
+
+    Example - 
+
+    ```python
+    fruit = "watermelon"
+    len(fruit)
+    ```
+
+#### String Pecularities
+
+Strings show a peculiarity when the ```is``` operator is used. The ```is``` operator checks if two strings share the same idetity. 
+If the ```is``` operator returns true for two strings it implies that the two strings are equal. 
+
+i.e. if ```a is b``` returns true, then ```a == b```. However, the converse is not true. If ```a == b``` returns true, then ```a``` may or may not have the same identity ```b```.
+
+#### Escape Characters 
+
+There are a few escape character in Python and they can be used to escape various characters.
+
+Some of the most common used escape characters are mentioned below - 
+
+| Escape Sequence |        Meaning Notes       |
+|-----------------|:--------------------------:|
+| \newline        |           Ignored          |
+| \\              |        Backslash (\)       |
+| \'              |      Single quote (')      |
+| \"              |      Double quote (")      |
+| \v              |   ASCII Vertical Tab (VT)  |
+| \t              | ASCII Horizontal Tab (TAB) |
 
 ### Indentation 
 
@@ -153,7 +187,7 @@ There are four built-in types for numbers -
 
 :warning: Integers in Python3 can be of **unlimited size**.
 
-:exclamation:   There is no "long int" in Python3 anymore. There is only one "int" type, which contains both "int" and "long" from Python2
+:exclamation: There is no "long int" in Python3 anymore. There is only one "int" type, which contains both "int" and "long" from Python2
 
 **Complex Numbers**
 
@@ -172,3 +206,89 @@ There are **two** kinds of division operators:
 
 1. "true division" performed by ```/```
 2. "floor division" performed by ```//```
+
+
+### Python Operators
+
+Python provides us many operators to work with. Below mentioned are some of the operators which I found different from the rest of the programming languages.
+
+1.  **Exponentiation**
+
+    The exponentiation operator is given by ```**```. Here is an example for it - 
+    
+    ```python
+    a = 9
+    print(a ** 10)
+    ```
+
+    :warning: To convert a integer to a string str can be used. 
+
+1. **Element of operator**
+
+    This operator is used to check if an element belongs to a given collection or not.
+
+    Here is an example -
+
+    ```python
+    a in [a, b. c]
+    ```
+
+    :warning: It can also be used as an iterrator.
+
+    ```python
+    fruits = ['watermelon', 'apple', 'mango', 'banana', 'lemon']
+
+    for fruit in fruits:
+        print(fruit)
+    ```
+
+### Sequential Data Types  
+ 
+Sequences are one of the principal built-in data types besides numerics, mappings, files, instances and exceptions. Python provides for six sequence (or sequential) data types:
+
+1. strings
+1. byte sequences
+1. byte arrays
+1. lists
+1. tuples
+1. range objects
+
+The above mentioned sequential data types may look different but nevertheless they the following underlying concepts in common- 
+
+1. The items or elements of strings, lists and tuples are ordered in a defined sequence
+1. The elements can be accessed via indices
+
+:warning:   Python uses the same syntax and function names to work on sequential data types. This means that we can do the following -
+
+```python
+fruits = ["watermelon", "apple", "dragon-fruit", "lemon"]
+
+favorite_numbers = [2, 202, 12092, 23]
+
+print(len(fruits), len(favorite_numbers)) 
+```
+
+#### Python Lists
+
+Generally speaking a **list** is an collection of objects. To be more precise: ```A list in Python is an ordered group of items or elements.```
+
+:warning: It's important to notice that these list elements don't have to be of the same type.
+
+A few properties of Python lists are mentioned below -
+
+1. They are ordered
+1. The contain arbitrary objects
+1. Elements of a list can be accessed by an index
+1. They are arbitrarily nestable, i.e. they can contain other lists as sublists
+1. Variable size
+1. They are mutable, i.e. the elements of a list can be changed
+
+**Syntax**
+
+List objects are enclosed by square brackets and separated by commas. Here are some examples - 
+
+```python
+fruits = ["watermelon", "banana", "lyhcee", "black-sapote"]
+stuff = ["watermelon", 20, 'A', "Ice-cream"] 
+```
+
