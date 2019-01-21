@@ -27,3 +27,10 @@ Do you like watermelons?
 """
 
 print(watermelon)
+
+x = 25
+y = 103
+
+print(x/y)
+
+print(x//y)

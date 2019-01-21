@@ -29,13 +29,14 @@ python -m compileall .
 :exclamation: Execution of a Python program means execution of the byte code on the Python Virtual Machine (PVM).
 
 
-
 ## Programming in Python 
 
 This document will contain a short demo of the python language - 
 
-1.  **Loops**
-    Loops in python follow this syntax - 
+### Loops
+
+    Loops in python follow this syntax -
+
     ```python
     for token in tokens:
     ````
@@ -46,8 +47,14 @@ This document will contain a short demo of the python language -
         print(item, end=" ")
     ```
 
-2.  **Strings**
+### Strings
+
     Strings are immutable in python. They can be enclosed in single, double, triple quotes.
+
+    Example - 
+
+    1. "text" OR ""text"" OR """text"""
+    1. 'text' OR ''text'' OR '''text'''
     
     :warning:   Strings in triple quotes can be written in multiple lines.
 
@@ -56,4 +63,55 @@ This document will contain a short demo of the python language -
     ```python 
         print(".-." * 4)
     ```
-3.  
+### Indentation 
+
+A block is a group of statements in a program or script. Usually it consists of at least one statement and of declarations for the block, depending on the programming or scripting language. A language, which allows grouping with blocks, is called a **block structured language**.
+
+```Python``` programs get structured through indentation, i.e. code blocks are defined by their indentation. All statements with the same distance to the right belong to the same block of code, i.e. the statements within a block line up vertically.
+
+### Variables and Data Types 
+
+**id Function**
+
+The ```id()``` function can be used to uniquely identify variables in python. Every variable, object has a unique id associated with it.
+
+:warning:   Data in a Python program is represented by objects.
+            The objects can be - 
+            1.  built-in, i.e. objects provided by Python
+            1.  objects from extension libraries  
+            1.  created in the application by the programmer.
+
+**Literals**
+
+Python's build-in core data-type is also called object type.
+
+There are four built-in types for numbers - 
+
+1. Normal Integers
+1. Octal Literals (0o21)
+1. Hexadecimal Literal (0x1A)
+1. Binary Literal (0b001010)
+
+:warning: bin(), hex(), and oct() functions can be used to create binary numbers for a given integer.
+
+:warning: Integers in Python3 can be of **unlimited size**.
+
+:exclamation:   There is no "long int" in Python3 anymore. There is only one "int" type, which contains both "int" and "long" from Python2
+
+**Complex Numbers**
+
+Complex numbers are written as ```<real part> + <imaginary part>j```
+
+The syntax for this is something like this - 
+
+```python
+x = 2 + 3j
+y = 3 + 4j
+```
+
+**Integer Division**
+
+There are **two** kinds of division operators:
+
+1. "true division" performed by "/"
+2. "floor division" performed by "//"
