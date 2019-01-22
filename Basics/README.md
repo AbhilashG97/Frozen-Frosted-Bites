@@ -207,6 +207,7 @@ There are **two** kinds of division operators:
 1. "true division" performed by ```/```
 2. "floor division" performed by ```//```
 
+:warning: ```//``` is faster than int(a/b);
 
 ### Python Operators
 
@@ -291,4 +292,125 @@ List objects are enclosed by square brackets and separated by commas. Here are s
 fruits = ["watermelon", "banana", "lyhcee", "black-sapote"]
 stuff = ["watermelon", 20, 'A', "Ice-cream"] 
 ```
+
+**Accessing List elements**
+
+We can access list elements through its index. Here is an exmaple - 
+
+```python
+fruits = ["lychee", "watermelon", "pine-apple", "lemon", "mango"]
+
+print(fruits[1], fruits[-1])
+
+```
+
+**Sublists**
+
+A Python list can have nested lists inside of a list. Here is an exmaple - 
+
+```python
+fruit_desserts = [["watermelon", ["watermelon-ice-cream", "watermelon-cupcake", "watermelon-pie"]], ["mango", ["mango-ice-cream", "mango-cupcake", "mango-pie", "mango-pizza"]]]
+
+print(fruit_desserts)
+```
+
+**Tuples**
+
+A **tuple** is an **immutable list**, i.e. a tuple cannot be changed in any way once it has been created. A tuple is defined analogously to lists, except that the set of elements is enclosed in parentheses instead of square brackets. 
+
+The rules for indices are the same as for lists. 
+
+:warning: Once a tuple has been created, you can't add elements to a tuple or remove elements from a tuple.
+
+Why use Tuples?
+
+Here are some reasons as to why you might consider using tuples - 
+
+1. Tuples are faster than lists.
+1. If you know that some data doesn't have to be changed, you should use tuples instead of lists, because this protects your data against accidental changes.
+1. The main advantage of tuples consists in the fact that tuples can be used as keys in dictionaries, while lists can't.
+
+Below is a code snippet which shows how to use a tuple - 
+
+```python 
+my_favorite_fruits = ("watermelon", "watermelon", "watermelon", "watermelon")
+
+print(my_favorite_fruits[len(my_favorite_fruits)-1])
+```
+
+**Slicing**
+
+Slicing can be used to extract an element from a list. The syntax for the slice operator is given below - 
+
+```python
+[a:b]  
+```
+
+where ```a``` is the start-index (**inclusive**) and b is the end-index (**exclusive**).
+
+Here is an example for the same - 
+
+```python
+fruits = ["mango", "pine-apple", "apple", "lemon", "lychee"]
+print(fruits[0:3])
+```
+
+Even this is correct - 
+
+```python
+print(fruits[:3])
+```
+
+:warning: We can also have a list which does not contain a few elements. The snippet shown below will print elements that do not have the last two items from the list. 
+
+```python
+print(fruits[:-2])
+```
+
+:warning: We can also provide a third operator to the slice operator. The third argument is the ```step```. The syntax for using the third operator is given below - 
+
+```python
+[a:b:c]
+```
+
+```a``` is the start index (**inclusive**), b is the end index (**exclusive**) and ```c``` is the step, which represents how much  to step over each element.
+
+Here is an example for on the it - 
+
+```python
+watermelon = "Watermelon is an awesome fruit!"
+
+print(watermelon[::2])
+```
+
+**Length**
+
+```len()``` can be used to calculate the length of a string, tuple, list.
+
+**Concatenation of sequences**
+
+Concatenation of sequences like string, lists, tuples etc is quite simple in Python. 
+
+The ```+``` operator can be used to concatenate sequences.
+
+Here are examples for the same - 
+
+```python 
+
+awesome_fruits = ["watermelon", "mango", "lychee", "kiwi", "dragon-fruit"]
+okayish_fruits = ["apple", "banana", "orange", "sapote"]
+
+fruits = awesome_fruits + okayish_fruits
+print(fruits)
+
+a = "Watermelon"
+b = "heart"
+
+watermelon = a + b
+
+print(watermelon)
+```
+
+:warning: The augmented assignment ```+=``` which is well known for arithmetic assignments work for sequences as well.
+
 
