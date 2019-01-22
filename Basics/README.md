@@ -413,4 +413,24 @@ print(watermelon)
 
 :warning: The augmented assignment ```+=``` which is well known for arithmetic assignments work for sequences as well.
 
+### More on Python Lists
 
+```Python``` list is more like a **stack** and it stores elements in ```First-In-Last-Out``` order. ```Pyhton``` provides us the following methods to work on lists - 
+
+1.  ```append()```
+    This method adds an element to the list. The element is added in ```First-In-Last-Out``` order. 
+
+    Here is an example - 
+
+    ```python 
+    awesome_list.append("watermelon")
+    ```
+
+1.  ```pop()```
+    pop() removes the top most element from the list and also returns it. 
+
+    Here is an example - 
+
+    ```python
+    fruit = awesome_list.pop()
+    ``` 
