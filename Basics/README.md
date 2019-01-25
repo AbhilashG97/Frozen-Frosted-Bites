@@ -166,11 +166,11 @@ A block is a group of statements in a program or script. Usually it consists of 
 
 The ```id()``` function can be used to uniquely identify variables in python. Every variable, object has a unique id associated with it.
 
-:warning:   Data in a Python program is represented by objects.
-            The objects can be - 
-            1.  built-in, i.e. objects provided by Python
-            1.  objects from extension libraries  
-            1.  created in the application by the programmer.
+:warning: Data in a Python program is represented by objects. The objects can be - 
+
+1. built-in, i.e. objects provided by Python   
+1. objects from extension libraries  
+1. created in the application by the programmer.
 
 **Literals**
 
@@ -231,7 +231,7 @@ Python provides us many operators to work with. Below mentioned are some of the 
     Here is an example -
 
     ```python
-    a in [a, b. c]
+    a in [a, b, c]
     ```
 
     :warning: It can also be used as an iterrator.
@@ -415,7 +415,7 @@ print(watermelon)
 
 ### More on Python Lists
 
-```Python``` list is more like a **stack** and it stores elements in ```First-In-Last-Out``` order. ```Pyhton``` provides us the following methods to work on lists - 
+```Python``` list is more like a **stack** and it stores elements in ```First-In-Last-Out``` order. ```Python``` provides us the following methods to work on lists - 
 
 1.  ```append()```
     This method adds an element to the list. The element is added in ```First-In-Last-Out``` order. 
@@ -433,4 +433,12 @@ print(watermelon)
 
     ```python
     fruit = awesome_list.pop()
+<<<<<<< Updated upstream
     ``` 
+=======
+    ```
+
+1.  ```peak()```
+
+    ```peek``` function is not available in ```Python```. We have to
+>>>>>>> Stashed changes
