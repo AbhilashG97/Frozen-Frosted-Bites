@@ -433,12 +433,153 @@ print(watermelon)
 
     ```python
     fruit = awesome_list.pop()
-<<<<<<< Updated upstream
-    ``` 
-=======
     ```
 
 1.  ```peak()```
 
-    ```peek``` function is not available in ```Python```. We have to
->>>>>>> Stashed changes
+    ```peek()``` function is not available in ```Python```. We have to use a work around for it. We make use of the slicing operator to get the top most element from the list. 
+
+    Here is an example for the same - 
+
+    ```python
+    element = list[-1]
+    ```
+### Extending a list
+
+If we want to add a list to a predefined list at the end, we can make use of the extend keyword. 
+
+:warning: The ```append``` keyword can also be used, but that will result in a sub-list being added to the list. Instead, we have to use the ```extends``` keyword to add items present in the other list. 
+
+Here is the code snippet that shows the same - 
+
+```python
+awesome_fruits = ['watermelon', 'guava', 'kiwi', 'mango', 'lychee']
+good_fruits = ['dragon-fruit', 'sapote', 'tamarind']
+
+awesome_fruits.append(good_fruits)
+good_fruits.extend(awesome_fruits)
+
+print(weird_fruit_salad)
+print(awesome_fruit_salad)
+```
+
+:warning: We can also use the ```+``` operator to append lists. Below is an example that shows the same - 
+
+```python
+list_a = ["orange", "mango", "lemon"]
+list_b = ["potato", "chilli", "pepper"]
+
+print(list_a + list_b)
+```
+
+:warning: However, please don't use the ```+``` operator in the below mentioned way. 
+
+```python
+list_a = list_a + list_b
+```
+
+The above code produces the same result but it is computationally very expensive. Instead, we should use the ```append``` or ```extend``` depending on our needs.
+
+:exclamation: It is however better to use ```append``` to append items to a pre-defined list as the append method is comparatively faster than using the ```+``` operator.
+
+### Removing an element from a list
+
+To remove an element from a list we can use the remove method. Here is an example for the same - 
+
+```python
+
+some_list = ["apple", "mango", "pine-apple", "lemon"]
+print(some_list)
+
+print("After removing an item .....")
+some_list.remove("apple")
+
+```
+
+:warning: We have to specify the value present inside the list rather than it's index in the remove method.
+
+### Finding the position of an element in the list
+
+We can find the position of an element in the list by making use of the ```index()``` method.
+
+Here is an example - 
+
+```pyhton
+some_list["element 1"]
+```
+
+:warning: The index method also takes in few other parameters as well. The index method takes in three parameters which are - 
+
+1. The element present in the list.
+1. The start index.
+1. The end index.
+
+Here is an example for the same - 
+
+```python
+colors = ["red", "blue", "green", "pink", "orange", "blue", "green"]
+print(colors.index("green", 3, len(colors)))
+```
+
+### Inserting elements from the list
+
+We can insert elements into a list by using the ```insert()``` command. The syntax for the command is as follows - 
+
+```python
+insert(index, element_to_be_inserted)
+```
+
+:warning: The insert function places the element to be inserted before the specified index.
+
+```python
+some_boring_list = ["Apple", "Orange", "Coffee", "Melon", "Grapes"]
+some_boring_list.insert(1, "watermelon")
+some_boring_list
+```
+
+### Shallow and Deep Copying in Python
+
+When two lists refer to the same value present in the same memory location, and when a change is made to that value, then the values of both the lists change.
+
+Here is an example depicting that scenario - 
+
+```python
+list_a = ["watermelon", "lychee", "apple", "mango", "tamarind"]
+list_b = list_a
+
+print(id(list_a), id(list_b))
+print(list_a, list_b)
+
+list_b[3] = "lemon"
+
+print(list_a, list_b)
+print(id(list_a), id(list_b))
+```
+
+:warning: In order to prevent this from happening we can make use of **shallow copy** feature of ```Python```. This can be done by making use of the **slicing operator**.
+
+Here is an example for the same - 
+
+```pyhton
+some_list = list_a[:]
+```
+
+If we make use of this operator, the list is copied using **shallow copy**. In shallow copy, two lists having the same value don't get affected in any way, if the values of any of the list are changed. 
+
+:warning: We can make use of **Deep copy** to copy elements from one list to another. In **deep copy** if any change is made to one list the other list gets automatically updated. 
+
+Here is an example on the usage of **deep-copy** - 
+
+```python
+from copy import deepcopy
+
+sweet_list = ["sugar", "jalebi", "icecream"]
+sweet_copy = deepcopy(sweet_list)
+
+print(sweet_list, sweet_copy)
+```
+
+### Dictionaries
+
+This section will be all about dictionaries present in ```Python```.
+
