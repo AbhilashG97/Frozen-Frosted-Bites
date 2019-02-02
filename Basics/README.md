@@ -448,7 +448,7 @@ print(watermelon)
 
 If we want to add a list to a predefined list at the end, we can make use of the extend keyword. 
 
-:warning: The ```append``` keyword can also be used, but that will result in a sub-list being added to the list. Instead, we have to use the ```extends``` keyword to add items present in the other list. 
+:warning: The ```append``` keyword can also be used, but that will result in a sub-list being added to the list. Instead, we have to use the ```extend``` keyword to add items present in the other list. 
 
 Here is the code snippet that shows the same - 
 
@@ -504,7 +504,7 @@ We can find the position of an element in the list by making use of the ```index
 
 Here is an example - 
 
-```pyhton
+```python
 some_list["element 1"]
 ```
 
@@ -560,11 +560,11 @@ print(id(list_a), id(list_b))
 
 Here is an example for the same - 
 
-```pyhton
+```python
 some_list = list_a[:]
 ```
 
-If we make use of this operator, the list is copied using **shallow copy**. In shallow copy, two lists having the same value don't get affected in any way, if the values of any of the list are changed. 
+If we make use of this operator, the list is copied using **shallow copy**. In shallow copy, two lists having the same value don't get affected in any way, if the values of any of the lists are changed. 
 
 :warning: We can make use of **Deep copy** to copy elements from one list to another. In **deep copy** if any change is made to one list the other list gets automatically updated. 
 
@@ -581,5 +581,5 @@ print(sweet_list, sweet_copy)
 
 ### Dictionaries
 
-This section will be all about dictionaries present in ```Python```.
+This section will be about dictionaries in ```Python```.
 
