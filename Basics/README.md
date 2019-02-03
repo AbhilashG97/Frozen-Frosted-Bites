@@ -602,7 +602,7 @@ awesome_fruit_desserts = {
     "strawbeery" : "strawberry shortcake"
 }
 ```
-For more examples on dictionaries and their usage, please check out [this]() fruity file.
+For more examples on dictionaries and their usage, please check out [this](https://github.com/AbhilashG97/Frozen-Frosted-Bites/blob/master/Basics/lychee.py) fruity file.
 
 :warning: As dictionaries are unordered, the items stored in dicitionaries are stored in any specific order.
 
