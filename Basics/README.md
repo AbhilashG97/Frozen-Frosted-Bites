@@ -581,5 +581,53 @@ print(sweet_list, sweet_copy)
 
 ### Dictionaries
 
-This section will be about dictionaries in ```Python```.
+This section will be about dictionaries in ```Python```. Dictionaries are like lists can be **shrunk** or **grown** by the user as when she/he pleases. They shrink and grow without the need of making copies. 
+
+:exclamation:**NOTE:** Dictionaries can be contained in lists and vice versa.
+
+#### Dictionaries vs Lists
+
+A list is an ordered sequence of objects whereas a dictionary is an unordered set. However, the main difference between a list and a dictionary is that in dictionary the items are accessed via their keys and not their indices.
+
+:warning: Every key in ```Python``` has a value associated with it. The values in the dictionaries can be any ```Python``` data type.  
+
+:warning: Dictionaries are unordered key-value pairs. They are also implemented as hash tables. 
+
+Here is a simple example on how to create a dictionary - 
+
+```python
+awesome_fruit_desserts = {
+    "watermelon" : "watermelon mochi",
+    "banana" : "banana sundae",
+    "strawbeery" : "strawberry shortcake"
+}
+```
+For more examples on dictionaries and their usage, please check out [this]() fruity file.
+
+:warning: As dictionaries are unordered, the items stored in dicitionaries are stored in any specific order.
+
+:warning: Also, only immutable objects can be stored as keys in dictionaries. If an mutable object is used as a key in a dictionary, ```Python``` will raise an error. This means that lists and dictionaries cannot be used as keys in Python. However, tuples can be used as keys in dictionaries as they are immutable.
+
+Here is an example  - 
+
+```python
+god_level_fruits = ("watermelon", "lychee", "apple", "mango", "grapes")
+hellish_fruits = ("banana", "dragon fruit", "sapote")
+
+fruity_stuff = {
+    god_level_fruits : "fruity awesomeness",
+    hellish_fruits : "why don't you taste good?!"
+}
+```
+
+#### Operators on Dictionaries
+
+Some operators used on dictionaries are given below :
+
+| Operator         | Explanation                                                                 |
+|------------------|-----------------------------------------------------------------------------|
+| ```len(d)```     | returns the number of stored entries, i.e. the number of (key,value) pairs. |
+| ```del d[k]```   | deletes the key k together with his value                                   |
+| ```k in d```     | True, if a key k exists in the dictionary d                                 |
+| ```k not in d``` | True, if a key k doesn't exist in the dictionary d                          |
 
