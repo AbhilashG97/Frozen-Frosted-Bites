@@ -55,3 +55,29 @@ awesome_menu = {
     "fruit_desserts" : fruit_dessert,
     "popularity" : fruit_dessert_popularity
 }
+
+# Operations on Dictionary
+
+# Deleting a key 
+
+del fruit_dessert['lemon']
+print('After deleting lemon : '+str(fruit_dessert))
+
+# Length of a dictionary 
+
+print('The length of the fruit dictionary is '+str(len(fruit_dessert)))
+
+# To check the existance of a key 
+
+print('Is watermelon present in the fruit dessert dictionary - '+str('watermelon' in fruit_dessert))
+
+# To check the absence of a key in a dictionary 
+
+print('Is dragon fruit present in the dictionary ' + str('dragon fruit' not in fruit_dessert))
+
+# pop() and popitem() of dictionary 
+
+print(fruit_dessert.pop('banana'))
+print(fruit_dessert.pop('dragon fruit', 'mango'))
+
+print(fruit_dessert.popitem())

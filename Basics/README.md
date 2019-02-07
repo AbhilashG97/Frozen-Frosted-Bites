@@ -631,3 +631,47 @@ Some operators used on dictionaries are given below :
 | ```k in d```     | True, if a key k exists in the dictionary d                                 |
 | ```k not in d``` | True, if a key k doesn't exist in the dictionary d                          |
 
+#### pop() and popitem()
+
+```pop()``` and ```popitem()``` can be used to remove an item from a dictionary. The ```pop()``` command removes a key and also returns the value associated with the removed key. 
+
+:warning: If however the key specified in the ```pop()``` command is not present in the dictionary then a key error will be raised. 
+
+:exclamation: To avoid getting errors we can also provide an optional argument in the ```pop()``` function. The optional argument is considered when the specified key is not present in the dictionary. 
+
+:warning: The ```popitem()``` method removes an entry randomnly from the dictionary. This method returns a tuple of size 2, which contains both the removed key and value pair from the dictionary.
+
+Here is an example  - 
+
+```python
+fruit_dessert = {
+    "watermelon" : "watermelon mochi",
+    "banana" : "banana ice-cream sundae",
+    "lychee" : "lychee ice cream",
+    "lemon" : "lemonade"
+}
+
+removed_item = fruit_dessert.pop('lemon')
+another_removed_item = fruit_dessert.pop('dragon fruit', 'cherry')
+
+
+removed_items = fruit_dessert.popitem()
+```
+
+#### Accessing non Existing Keys
+
+Acessing elements in the dictionary that do not exist result in errors. In order to avoid that we can make use of the ```in``` keyword. The ```in``` keyword checks whether the key exists or not and returns a boolean value corresponding to the result.
+
+Here is an example - 
+
+```python
+fruit_dessert = {
+    'mango' : 'mango shake',
+    'cherry' : 'dry cherry pops'
+}
+
+print(mango in fruit_dessert)
+```
+
+#### Some other important methods
+
