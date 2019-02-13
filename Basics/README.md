@@ -675,3 +675,134 @@ print(mango in fruit_dessert)
 
 #### Some other important methods
 
+1.  **```copy()```**
+
+    A dictionary can copied with the copy method.
+
+    Here is an example for the same - 
+    
+    ```python
+    fruits = {
+        "tasty" : "watermelon",
+        "not tasty" : "banana"
+        "very very tasty" : "yellow watermelon"
+    }
+
+    duplicate_fruits = fruits.copy()
+    ```
+    :warning: The ```copy()``` method performs a shallow copy and not deep copy.
+
+1.  **```update()```**
+
+    We can also merge dictionaries by making use of the ```update()``` method.
+
+    Here is an example - 
+
+    ```python
+
+    fruits = {
+        "tasty" : "watermelon",
+        "not tasty" : "banana"
+        "very very tasty" : "yellow watermelon"
+    }
+
+    desserts = {
+        "tasty" : "watermelon mochi"
+        "not tasty" : "banana mochi"
+    }
+
+    desserts.update(fruits)
+    ```
+
+#### Iterating over a Dictionary
+
+We can also iterate over the keys of a dictionary. 
+
+Here is an example - 
+
+```python
+for fruit in fruits: 
+    print(fruit)
+```
+
+or ```keys()``` method can also be used.
+
+```python
+for fruit_key in fruit.keys():
+    print(fruit_key)
+```
+
+To iterate over the values of a dictionary we use the ```values()``` method.
+
+Here is an example for the same - 
+
+```python
+for fruit_value in fruit.values():
+    print(fruit_value)
+```
+
+or we can also access the values of the corresponding keys in the dictionary.
+
+```python
+for key in fruits: 
+    print(fruits[key])
+```
+
+:warning: The above method of iterating a dictionary is not good.  The above-mentioned method is quite slow as compared to one described initially.
+
+#### Lists and Dictionaries
+
+Python allows to convert a list to a dictionary and a dictionary to a list.
+
+1.  **List to Dictionary conversion**
+
+    A list can be converted to a dictionary in the following way - 
+
+    1. Use the ```zip()``` function to get a list iterator.
+    1. Pass the list iterator to the ```dict()``` function which will generate a list from the dictionary.
+
+Here is an example for it -
+
+```python
+    dessert = ["watermelon mochi", "lime tart", "banana ice-cream sundae", "lychee icecream"]
+    fruit = ["watermelon", "lemon", "banana", "lychee"] 
+
+    dessert_fruit_dictionary = dict(zip(dessert, fruit))
+```
+
+There is another way to do the same thing, however it is recommended not to follow the below-mentioned method - 
+
+Here we form a list from the list-iterator that is returned when the ```zip()``` method is used. 
+
+```python
+    fruit_iterator = zip(fruit, dessert)
+    fruit_dessert_list = list(fruit_iterator) # This creates a list of tuples 
+    fruit_dessert_dictionary = dic(fruit_dessert_list)
+```
+
+:warning: The above method of creating a dictionary from a list is not efficient.
+
+:warning: Also, if the size of the two lists are not same then the extra element will not be created in the dictionary.  
+
+:warning: The list iterator type that is returned from the ```zip()``` method is exhaustable. If it is used once it cannot be used again. An example for the same is given below - 
+
+```python
+list_iterator = zip(list_1, list_2)
+print(list(list_iterator)) # list_iterator has been used, hence it cannot be used again.
+print(list(list_iterator)) # here an empty list will be printed as list iterator has already been used.
+```
+
+1.  **Dictionary to List conversion**
+
+A dictionary can also be converted to a list. To convert a dictionary to a list, we make use of the ```items()``` method. 
+
+Here is an exmaple - 
+
+```python
+fruit_desserts = {
+    "watermelon" : "watermelon short cake",
+    "mango" : "mango icecream sundae"
+}
+list = dictionary.items()
+```
+
