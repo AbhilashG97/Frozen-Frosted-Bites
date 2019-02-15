@@ -794,7 +794,7 @@ print(list(list_iterator)) # here an empty list will be printed as list iterator
 
 1.  **Dictionary to List conversion**
 
-A dictionary can also be converted to a list. To convert a dictionary to a list, we make use of the ```items()``` method. 
+A dictionary can also be converted to a list. To convert a dictionary to a list, we make use of the ```items()``` method. We can also make use of the ```keys()``` and ```values()``` method.
 
 Here is an exmaple - 
 
@@ -804,5 +804,257 @@ fruit_desserts = {
     "mango" : "mango icecream sundae"
 }
 list = dictionary.items()
+
+list = dictionary.values()
 ```
 
+#### Sets and Frozensets
+
+Sets allow us to store unique items, i.e. no duplicate items can be stored. If duplicate items are given to a set, set automatically removes them. Sets in python cannot mutable objects.
+
+We can create sets in python in the following two ways - 
+
+1.  **set() function**
+
+    A set in python can be created by making use of the ```set()``` fuction. 
+    
+    Here is an example - 
+
+    ```python
+    watermelon = set('I love watermelons!')
+    ```
+
+    :warning: We can pass only pass immutable objects as a parameter in the ```set()``` function. If mutable objects are given as a parameter in the ```set()``` function, it will raise an error.
+
+    Here is an example which shows the error raised if a mutable object is passed as a parameter in the set function - 
+
+    ```python
+    new_set = set((('watermelon', 'mango'), ('chilli', 'potato', 'lemon')))
+    ```
+
+1. **{} braces**
+
+    After ```python 2.6```, sets can be created by just using the ```{} braces```. 
+    
+    Here is an example for the same - 
+
+    ```python
+    latest_set = {'apple', 'mango', 'banana', 'sapote'}
+    ```
+
+##### Frozensets
+
+Frozensets are immutable sets. Sets are mutable, but frozensets are not. Frozensets can be created using the ```frozenset()``` method.
+
+Here is an exmaple that shows it's usage - 
+
+```python
+new_frozen_set = frozenset(['apple', 'banana', 'mango', 'orange'])
+```
+
+#### Set Operations
+
+Below mentioned are the operations that can be performed on sets - 
+
+1.  **```add(element)```**
+
+    The ```add(element)``` method can be used to add immutable objects to a list. However, if we try to add a mutable object to a list, an error will be raised.
+
+
+    Here is an exmaple - 
+
+    ```python
+    fruit_set = {'apple', 'lychee', 'watermelon'}
+    fruit_set.add('sapote')
+    ```
+    :warning: The below shown code will raise an error as a mutable object is being added to a set.
+
+    ```python
+    fruit_set.add(['watermelon', 'mango', 'sapote', 'lychee'])
+    ```
+
+1.  **```clear()```**
+
+    The clear method removes all the elements from the set.
+
+    Here is an example for the same - 
+
+    ```python
+    fruit_set.clear() 
+    ```
+
+1. **```copy()```**
+
+    The ```copy()``` method shallow copies a set. 
+
+    Here is an example - 
+
+    ```python
+    copied_set = fruit_set.copy() 
+    ``` 
+
+1. **```difference```**
+
+    The ```difference()``` method finds the differnce between two sets. 
+
+    Here is an example for the same - 
+
+    ```python
+    tasty_fruits = {'watermelon', 'mango', 'lychee', 'lemon'}
+    super_tasty_fruits = {'watermelon', 'yellow-watermelon'}
+
+    some_fruits = tasty_fruits.difference(super_tasty_fruits)
+    ```
+
+1.  **```difference_update()```**
+
+    This method is similar to the ```difference()``` method, the only difference being that the result is stored in the same set. It is equivalent to ```x = x - y```. 
+
+    Here is an example - 
+
+    ```python
+    x = {'a', 'b', 'c', 'd'}
+    y = {'c', 'd'}
+    x.difference_update(y)
+    ``` 
+
+1.  **```discard(element)```**
+
+    This method is used to remove an element from the set. If the element specified in the function parameter is not present in the set then no error is raised.
+
+    Here is an example - 
+
+    ```python
+    fruit_set.discard('melon')
+    ```
+
+1.  **```remove(element)```**
+
+    The ```remove(element)``` method removes the specified element from the set. However, if the element specified is not present in the set then here an error is raised.
+
+    Here is an example - 
+
+    ```python
+    fruit_set.remove('watermelon')
+    ```  
+
+    :warning: Here an error will be raised if the specified element in the ```remove(element)``` method is not present in the set.
+
+1.  **```union(set)```**
+
+    This method returns the union of two sets as a new set. 
+    
+    Here is an example
+
+    ```python
+    x = {'1', '2', '3'}
+    y = {'a', 'b', 'c'}
+
+    z = x.union(y)
+    ```  
+
+1.  **```intersection(set)```**
+
+    This method is used find the intersection of two sets. 
+
+    Here is an example - 
+
+    ```python
+    x = {'1', '2', '3'}
+    y = {'a', 'b', 'c'}
+
+    z = x.intersection(y)
+    ```
+
+1.  **```isdisjoint(set)```**
+
+    This method is used to find whether two sets are ```disjoint``` or not. It returns  boolean value.
+
+    Here is an example - 
+
+    ```python
+    truth_value = x.isdisjoint(y)
+    ```
+
+1. **```issubset()```**
+
+    This method is used to check whether a given set is a subset of another set.
+
+    Here is an example - 
+
+    ```python
+    x = {'1', '2', '3', 'a', 'c', 'b'}
+    y = {'a', 'b', 'c'}
+    
+    print(x.issubset(y))
+    ```
+
+    Also, the following shortcuts can also be used to find whether a given set is a subset of another set - 
+
+    1.  ```<=```
+
+        The ```<=``` operator stands for ```is Subset of```. Here is an example - 
+
+        ```python
+        x = {'1', '2', '3', 'a', 'c', 'b'}
+        y = {'a', 'b', 'c'}
+
+        print(x <= y)
+        ```
+
+    1.  ```<```
+
+        The ```<``` opertaor stands for ```is proper subset of```. This can be used in the following way - 
+
+        ```python
+        x = {'1', '2', '3', 'a', 'c', 'b'}
+        y = {'a', 'b', 'c'}
+
+        print(x < y)
+        ```
+
+    1. ```>=```
+
+        The ```>=``` opertaor stands for ```is superset of```. This can be used in the following way - 
+
+        ```python
+        x = {'1', '2', '3', 'a', 'c', 'b'}
+        y = {'a', 'b', 'c'}
+
+        print(x >= y)
+        ```
+
+    1.  ```>```
+
+        The ```>``` opertaor stands for ```is proper superset of```. This can be used in the following way - 
+
+        ```python
+        x = {'1', '2', '3', 'a', 'c', 'b'}
+        y = {'a', 'b', 'c'}
+
+        print(x > y)
+        ```
+
+1.  **```issuperset(set)```**
+
+    This method is used to find the whether a given set is ```superset``` of another set or not.
+
+    Here is an example - 
+
+    ```python
+    x = {'1', '2', '3', 'a', 'c', 'b'}
+    y = {'a', 'b', 'c'}
+
+    print(x.issupperset(y))    
+    ```
+
+1.  **```pop()```**
+
+    This method removes and returns an arbitrary element from a given set.
+
+    Here is an example - 
+
+    ```python
+    x = {1, 2, 4, 5, 7, 8}
+    x.pop() 
+    ```

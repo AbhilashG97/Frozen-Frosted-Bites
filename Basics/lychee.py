@@ -81,3 +81,49 @@ print(fruit_dessert.pop('banana'))
 print(fruit_dessert.pop('dragon fruit', 'mango'))
 
 print(fruit_dessert.popitem())
+
+# copying a dictionary using the copy() method
+
+fruit_dessert_copy = fruit_dessert.copy()
+
+# merging dictionaries with update()
+
+fruity_stuff.update(awesome_menu)
+
+# 
+# iterating over a dictionary
+#
+
+# iterating over the keys of a dictionary
+
+for menu_item in awesome_menu:
+    print(menu_item)
+print()
+
+# iterating over values of a dictionary
+
+for menu_value in awesome_menu.values():
+    print(menu_value)
+print()
+
+# 
+# list and dictionary conversions
+#
+
+# list to dictionary conversion 
+
+print('List to dictionary converion - ')
+new_dictionary = dict(zip(awesome_menu, fruit_dessert))
+print(new_dictionary)
+
+# dictionary to list conversion
+print('Dictionary to list conversion - ')
+new_list = new_dictionary.items()
+print(new_list)
+
+new_list = new_dictionary.values()
+print(new_list)
+
+new_list = new_dictionary.keys()
+print(new_list)
+
