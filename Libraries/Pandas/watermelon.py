@@ -1,8 +1,8 @@
 # A code snippet to demostrate the use of 
 # pandas python library
 
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
 
 # The data is stored in the pandas DataFrame
 reviews = pd.read_csv('data\ign.csv')

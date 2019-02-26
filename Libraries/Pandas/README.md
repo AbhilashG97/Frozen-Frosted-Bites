@@ -10,19 +10,19 @@ Please view [this](#) file which contains sample code on the usage of the pandas
 
 Before the pandas library can be used, it has to be installed and imported. The pandas documentation provides a detailed explanation on how to install pandas. 
 
-Importing the pandas library is also quite simple. It can be done in the following way - 
+Importing the pandas library is quite simple. It can be done in the following way - 
 
 ```python
 import pandas as pd
 ```
 
-:exclamation: Usually pandas is aliased as pd for ease of usage.
+:exclamation: Usually, **pandas** is aliased as **pd** for ease of usage.
 
 ### Reading from a file
 
-Reading from a file using pandas is really easy. Depending on the type of the file, a suitable method can be selected by suffixing the type of the file. 
+Reading from a file using pandas is really easy. Depending on the type of the file, a suitable method can be selected by suffixing the type of the file in ```read_x```, where ```x``` is a file type. 
 
-Below is table which shows the variuos methods that can be used to read from various files - 
+Below is table which shows various methods that can be used to read from files of different types - 
 
 | Format Type | Data Description     | Reader         | Writer       |
 |-------------|----------------------|----------------|--------------|
@@ -60,6 +60,7 @@ data = pd.read_csv('fileName')
 1. ```head()```
 1. ```tail()```
 1. ```shape```
+
 The above mentioned methods can be used on both ```DataFrame``` and ```Series```. 
 
 Invoking these methods shows a sample of the data, usually upto 5 rows. The ```head()``` function displays the first 5 rows and the ```tail()``` function displays the last 5 rows.
@@ -88,14 +89,14 @@ One of the ways to index values in pandas is using ```iloc``` and ```loc```.
     data.iloc[row, column] 
     ```
 
-1.  **```loc[]```**
+1.  **```loc```**
 
     In ```loc``` the name of the row or the column can be directly specified. There is no need to refer the data through its index.
 
     Here is an exmaple - 
 
     ```python
-    data.loc["awesome_fruits", "expensive_fruits"]
+    data.loc[:, "awesome_fruits", "expensive_fruits"]
 
     data.loc["awesome_fruits", :] 
     ```
@@ -109,4 +110,22 @@ data['row_name']
 
 data['column-name']
 ```
+
+The above code returns a ```Series```. ```Series``` is one of the data structures present in pandas. A single column of data is stored in a ```Series```.
+
+:warning: A list of columns can also be passed as a key to get the data.  
+
+Here is an example -
+
+```python
+data[['column_name_1', 'column_name_2']]
+```
+
+### Creating Series and DataFrames
+
+Pandas allows us to create ```Series``` and ```DataFrame``` data structures. 
+
+#### Creation of Series 
+
+#### Creation of DataFrame
 
