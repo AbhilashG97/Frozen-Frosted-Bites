@@ -116,6 +116,5 @@ custom_reviews = reviews[mixed_filters]
 print(custom_reviews.head())
 
 # Pandas Plotting
-
 custom_reviews['score'].plot(kind='hist')
 plt.show()

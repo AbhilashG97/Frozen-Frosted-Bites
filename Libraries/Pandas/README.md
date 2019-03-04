@@ -41,7 +41,7 @@ Below is table which shows various methods that can be used to read from files o
 | SQL         | SQL                  | read_sql       | to_sql       |
 | SQL         | Google Big Query     | read_gbq       | to_gbq       |
 
-Here is an exmaple which shows how to read data from a csv file - 
+Here is an example which shows how to read data from a csv file - 
 
 ```python
 import pandas as pd
@@ -127,5 +127,106 @@ Pandas allows us to create ```Series``` and ```DataFrame``` data structures.
 
 #### Creation of Series 
 
+A ```Series``` data structure can be created by passing a list as parameter. A ```Series``` data structue holds data stored in columns.
+
+Here is an example - 
+
+```python
+series = pd.Series(['watermelon', 'mango', 'apple'])
+```
+
 #### Creation of DataFrame
 
+A ````DataFrame``` can be created in a number of ways, some of them are mentioned below -
+
+1.  **Creation from Series**
+
+    A DataFrame can be created from a Series. 
+
+    Here is an example -
+
+    ```python
+    my_DataFrame = pd.DataFrame([series_one, series_two])
+    print(my_DataFrame)
+    ```
+
+1.  **Creation from a dictionary**
+
+    A ```DataFrame``` can also be created from a dictionary. Here, each ```key-value``` pair constitutes a column in a DataFrame. The ```key``` becomes the heading the value is ends up as the data.
+
+    Here is an example - 
+
+    ```python
+    my_DataFrame = pd.DataFrame({
+        fruits : ['watermelon', 'lychee', 'pineapple', 'mango']
+        desserts : ['ice cream', 'popsicle', 'juice', 'shake']
+    })
+    ```
+
+#### DataFrame methods
+
+This section contains information on the methods used in DataFrames. Most of the methods used in DataFrames are also applicable for Series. 
+
+##### Reading data
+
+Pandas gives the user the ability to access any row(s) or column(s) of a DataFrame. Since, a DataFrame is also like a map, the data can be accessed from it by specifying its key.
+
+Here is an example- 
+
+```python 
+data_portion = data['column_name']
+```
+
+##### Performing calculations
+
+Pandas also has a few methods which can be used to calculate various statistical parameters. - 
+
+| Pandas DataFrame methods | Method Description                                            |
+|--------------------------|---------------------------------------------------------------|
+| pandas.DataFrame.corr    | Finds the correlation between columns in a DataFrame          |
+| pandas.DataFrame.count   | Counts the number of non-null values in each DataFrame column |
+| pandas.DataFrame.max     | Finds the highest value in each column                        |
+| pandas.DataFrame.min     | Finds the lowest value in each column                         |
+| pandas.DataFrame.median  | Finds the median of each column                               |
+| pandas.DataFrame.std     | Finds the standard deviation of each column                   |
+
+:waring: We can either specify the columns on which we want to do the calculations or we can directly use the above mentioned methods, Pandas will find out those columns on which the mathematical operations can be performed and it will do the calculations on those columns only.
+
+Here is an example - 
+
+```python
+print(data['some_column'].mean())
+
+print(data.mean())
+```
+
+:warning: Also, basic math operations can also be performed on the data.
+
+Here is an example - 
+
+```python 
+print(data.mean() / 2)
+```
+
+##### Filtering Data Sets 
+
+```Pandas``` can be used to filter the data based on a particular criteria. 
+
+Here is an example - 
+
+```python
+filter = data['some_column'] > some_value
+
+new_date = data[filter]
+```
+
+:warning: The **````filter```** variable contains a list of boolean values, according to which a new data can be generated. 
+
+:exclamation: Multiple filters can also be applied to a data set by using the ```&```.
+
+Here is an example -
+
+```python 
+filter = data[some_column] > value & data[some_column] < value
+filtered_data = data[filter]
+```
