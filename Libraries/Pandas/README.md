@@ -2,7 +2,7 @@
 
 :warning: The content for this repository is taken from various online resources. 
 
-Please view [this](#) file which contains sample code on the usage of the pandas libaray.
+Please view [this](https://github.com/AbhilashG97/Frozen-Frosted-Bites/blob/master/Libraries/Pandas/watermelon.py) file which contains sample code on the usage of the pandas libaray.
 
 ## Basics
 
@@ -16,7 +16,7 @@ Importing the pandas library is quite simple. It can be done in the following wa
 import pandas as pd
 ```
 
-:exclamation: Usually, **pandas** is aliased as **pd** for ease of usage.
+:exclamation: Usually, **pandas** is aliased as **pd** for ease of use.
 
 ### Reading from a file
 
@@ -57,9 +57,9 @@ data = pd.read_csv('fileName')
 
 ```pandas``` also allows the user to examine the data. To exmaine the data the following methods can be used - 
 
-1. ```head()```
-1. ```tail()```
-1. ```shape```
+1. **```head()```**
+1. **```tail()```**
+1. **```shape```**
 
 The above mentioned methods can be used on both ```DataFrame``` and ```Series```. 
 
@@ -137,7 +137,7 @@ series = pd.Series(['watermelon', 'mango', 'apple'])
 
 #### Creation of DataFrame
 
-A ````DataFrame``` can be created in a number of ways, some of them are mentioned below -
+A ```DataFrame``` can be created in a number of ways, some of them are mentioned below -
 
 1.  **Creation from Series**
 
@@ -208,7 +208,7 @@ Here is an example -
 print(data.mean() / 2)
 ```
 
-##### Filtering Data Sets 
+### Filtering Data Sets 
 
 ```Pandas``` can be used to filter the data based on a particular criteria. 
 
@@ -220,7 +220,7 @@ filter = data['some_column'] > some_value
 new_date = data[filter]
 ```
 
-:warning: The **````filter```** variable contains a list of boolean values, according to which a new data can be generated. 
+:warning: The **```filter```** variable contains a list of boolean values, according to which a new data can be generated. 
 
 :exclamation: Multiple filters can also be applied to a data set by using the ```&```.
 
@@ -230,3 +230,24 @@ Here is an example -
 filter = data[some_column] > value & data[some_column] < value
 filtered_data = data[filter]
 ```
+
+### Plotting graph
+
+Pandas can also be used to plot graphs form the data. In order to to plot graphs, ```matplotlib``` needs to be installed and imported. 
+
+Here is an example - 
+
+```pyhton 
+import matplotlib.pyplot as plt
+
+custom_reviews['score'].plot(kind='hist')
+plt.show()
+```
+
+:warning: To plot a histogram, we specify the kind as an argument inside the ```plot()``` function. 
+
+:warning: In order for the plot to be shown the ```show()``` function needs to be used.
+
+:sparkles: This completes the basics of the pandas library. :sparkles:
+
+<hr>
