@@ -6,6 +6,8 @@ Please view [this](https://github.com/AbhilashG97/Frozen-Frosted-Bites/blob/mast
 
 ## Basics
 
+Please view [this](#) file which contains sample code on the usage of the pandas libaray.
+
 ### Importing the library 
 
 Before the pandas library can be used, it has to be installed and imported. The pandas documentation provides a detailed explanation on how to install pandas. 
@@ -251,3 +253,25 @@ plt.show()
 :sparkles: This completes the basics of the pandas library. :sparkles:
 
 <hr>
+
+## Intermediate 
+
+:warning: Please view [this](#) file which contains sample code.
+
+This section will contain more information on the pandas library. 
+
+### More on reading data
+
+If the data to be read is stored in a specific format, that also needs to be specified while reading the data. 
+
+Here is an example -
+
+```python 
+import pandas as pd
+
+data = pd.read_cvs('data.csv', 'LATIN-1')
+```
+
+### Analyaing data
+
+If we want to find out a 
