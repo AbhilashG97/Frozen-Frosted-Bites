@@ -210,6 +210,8 @@ Here is an example -
 print(data.mean() / 2)
 ```
 
+:warning: The axis can also be specified in various dataframe methods. If the axis is set to ```1``` the function will perform the calculation across a row and if the axis is set to ```0```, the function will perform the calculation on a column. The axis by default is set to ```1```.
+
 ### Filtering Data Sets 
 
 ```Pandas``` can be used to filter the data based on a particular criteria. 
