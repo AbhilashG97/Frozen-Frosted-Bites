@@ -105,7 +105,7 @@ If the webpage has been downloaded correctly we should see a stutus code that st
 
 :warning: The ```html``` of the downloaded webpage can be viewed by making use of the ```content``` attribute. 
 
-### Parsing a webpage with BeautifulSoup
+## Parsing a webpage with BeautifulSoup
 
 This section will contain information on how to parse a ```html document```. 
 
@@ -123,3 +123,94 @@ print(watermelon.prettify())
 
 :warning: The ```prettify()``` method is used to make the html content look pretty and easy to read.
 
+:exclamation: The ```children``` property can be used to get the list of BeautifulSoup objects, which in turn can be used to extract information from appropriate tags.
+
+The ```children``` property returns a list generator.
+
+Here is an example - 
+
+```python 
+print([type(item) for item in watermelon.children])
+```
+
+A few of the objects returned by the children property are as follows -  
+
+1.  ```bs4.element.Doctype```
+
+    This object contains information about the type of the document.
+
+1.  ```bs4.element.NavigableString```
+
+    The second object represents the type of text found. 
+
+1.  ```bs4.element.Tag```
+
+    This object contains other nested ```Tags```. This object will be used to extract information from a ```html``` object.
+
+We use access each tag to get the necessary information. First, the ```HTML``` tag is accessed followed by other nested tags. 
+
+Here is an example -
+
+```python 
+html = watermelon.children[2]
+```
+Similarly, we can keep going inside the nested tags until we find the information that we are looking for.
+
+Once we find the right tag inside the body of the webpage, the ```get_text()``` method can be invoked to get the required content.
+
+Here is an example - 
+
+```python
+content = list(body.children)[7]
+print(content.get_text())
+```
+
+### Shorcut for parsing a webpage 
+
+Instead of going inside each of the tags nested inside the body tag, ```find_all()``` function can be used to get all the tags. 
+
+The ```find_all()``` function returns a list of tags, therefore we'll have to iterate the list to get all the information.
+
+Here is an example - 
+
+```python 
+
+tags = page.find_all('p)
+
+print([tag.get_text() for tag in tags])
+```
+
+:warning: The above example will get all the tags present in the webpage. 
+
+:exclamation: If we only want to get the first occurance of a tag in the webpage, the ```find()``` method can be used. 
+
+### Searching for Tag with classes and ids
+
+Please view the following links - 
+
+1. [Link 1](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/outerText)
+1. [Link 2](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435)
+
+:warning: To search with css classes and ids, specify the name of the class or id in the ```find_all()```. 
+
+Here is an example - 
+
+```python
+tags = watermelon.find_all('p', class_ = 'outer-text')
+
+more_tags = watermelon.find_all('p', id='recipeMododel')
+```
+
+:exclamation: The above functions will return a list, hence they will have to be iterated to get the required result.
+
+:warning: While specifying the class, please use **```class_```** as the argument as class is a keyword in ```Python```.
+
+### Using CSS selectors along with find_all()
+
+```CSS``` selectors can also be used to search for appropriate tags nested inside the body tag. 
+
+Here is an example - 
+
+```python
+ 
+```
