@@ -79,4 +79,9 @@ more_tags = watermelon.find_all(class_='small-4 columns text-center')
 
 # Iterate the list of tags and print their content 
 print([tag.get_text() for tag in more_tags])
- 
+
+# Selecting tags using css selectors
+
+print("\nSELECTORS\n")
+selector_tags = watermelon.select("div a")
+print([item.get_text() for item in selector_tags])

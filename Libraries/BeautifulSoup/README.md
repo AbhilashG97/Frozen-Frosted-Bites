@@ -209,8 +209,40 @@ more_tags = watermelon.find_all('p', id='recipeMododel')
 
 ```CSS``` selectors can also be used to search for appropriate tags nested inside the body tag. 
 
+A few examples of ```CSS Selectors``` are given below - 
+
+1.  ```p a```
+
+1.  ```body p a```
+
+1.  ```html body```
+
 Here is an example - 
 
 ```python
- 
+tags = watermelon.select("div p")
 ```
+
+### Using Chrome Dev Tools
+
+```Chrome Dev tools``` can be of great use while scrapping data from a website. 
+
+Please view [this site](https://developers.google.com/web/tools/chrome-devtools/) to know more about ```chrome dev tools``` and its usage.
+
+:warning: To use ```Chrome Dev Tools``` you can use ```Ctrl + Shift + J``` to enable it.
+
+## Compiling the data
+
+Once we have all the necessary data stored in a suitable collection, we can put all that data together in a ```Pandas DataFrame```.
+
+Later, the ```pandas DataFrame``` can be exported as a csv file.
+
+Here is an example - 
+
+```python 
+data.to_csv('weather-data.csv', sep=',')
+```
+
+:exclamation: In the above code snippet, data is a ```pandas DataFrame.```
+
+:warning: Please view [this file](#) which contains a sample ```python``` program on the use of ```BeautifulSoup```.
