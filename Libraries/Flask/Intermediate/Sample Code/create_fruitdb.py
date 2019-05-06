@@ -29,7 +29,7 @@ def insert_values(connection):
         (1, "Sour Sop", 23),
         (2, "Dragon Fruit", 67),
         (3, "Star apple", 33),
-        (4 "Star fruit", 83)
+        (4, "Star fruit", 83)
     ''')
     connection.commit()
 
