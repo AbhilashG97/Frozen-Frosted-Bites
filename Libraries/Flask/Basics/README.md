@@ -34,11 +34,11 @@ Setup the proper directories for the flask application.
 
 :exclamation: Please refer to the ```Sample Code``` directory for sample programs written using the Flask Framework. 
 
-:warning: The ```api.py``` file contains a very simple flask web application that runs in the web browser. You can have a look at the file [here]().
+:warning: The ```hello_world.py``` file contains a very simple flask web application that runs in the web browser. You can have a look at the file [here](https://github.com/AbhilashG97/Frozen-Frosted-Bites/blob/master/Libraries/Flask/Basics/Sample%20Code/hello_world.py).
 
 ## Explanation for the sample app
 
-Please have a look at this [file](#)
+Please have a look at this [file](https://github.com/AbhilashG97/Frozen-Frosted-Bites/blob/master/Libraries/Flask/Basics/Sample%20Code/hello_world.py)
 
 The first line is an ```import statement``` which imports the flask library. 
 
@@ -69,7 +69,7 @@ Here is an example -
 ]
 ```
 
-A sample python code can be found in the ```sample code``` directory. Please view this [file](#).
+A sample python code can be found in the ```sample code``` directory. Please view this [file](https://github.com/AbhilashG97/Frozen-Frosted-Bites/blob/master/Libraries/Flask/Basics/Sample%20Code/json_data.py).
 
 In the above mentioned sample code, we have created a simple json data which can be accessed through ```routing```. ALso, the ```jsonify()``` function was used which coverts a list of dictionaries to a json data. 
 
@@ -77,7 +77,7 @@ In the above mentioned sample code, we have created a simple json data which can
 
 ## Resource Specific API
 
-We can also construct APIs that are resource specific. Please view [this file](#) for the sample code.
+We can also construct APIs that are resource specific. Please view [this file](https://github.com/AbhilashG97/Frozen-Frosted-Bites/blob/master/Libraries/Flask/Basics/Sample%20Code/filtered_api.py) for the sample code.
 
 The query can be added to the url like this - ```?id=0```
 
